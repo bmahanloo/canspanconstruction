@@ -3,7 +3,7 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
     return (
         <div className="nav">
-            <div className="nav-logo">Ben CanSpan Construction</div>
+            <div className="nav-logo">CanSpan Construction</div>
             <ul className="nav-menu">
                 <li>Home</li>
                 <li>Explore</li>
