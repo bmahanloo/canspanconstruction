@@ -3,12 +3,20 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
     return (
         <div className="nav">
-            <div className="nav-logo">Canspan Construction</div>
-            <ul className="nav-menu">
-                <li>Home</li>
-                <li>Explore</li>
-                <li>About</li>
-                <li className="nav-contact">Contact</li>
+            <a href="/" className="nav-logo">Canspan Construction</a>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a>Past Projects</a>
+                </li>
+                <li>
+                    <a href="/aboutpage">About</a>
+                </li>
+                <li className="nav-contact">
+                    <a href="/contactpage">Contact</a>
+                </li>
             </ul>
         </div>
     )
