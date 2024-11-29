@@ -1,5 +1,6 @@
-import './HomePage.css';
-import northvan from '../../assets/NorthVan.jpg';
+import "./HomePage.css";
+
+import northvan from "../../assets/NorthVan.jpg";
 
 const HomePage: React.FC = () => {
   return (
@@ -7,6 +8,6 @@ const HomePage: React.FC = () => {
       <img src={northvan} className="home-page" alt="home-page" />
     </div>
   );
-}
+};
 
 export default HomePage;

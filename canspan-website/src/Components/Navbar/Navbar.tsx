@@ -1,25 +1,29 @@
-import './Navbar.css';
+import "./Navbar.css";
+
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-    return (
-        <div className="nav">
-            <a href="/" className="nav-logo">Canspan Construction</a>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a>Past Projects</a>
-                </li>
-                <li>
-                    <a href="/aboutpage">About</a>
-                </li>
-                <li className="nav-contact">
-                    <a href="/contactpage">Contact</a>
-                </li>
-            </ul>
-        </div>
-    )
-}
+  return (
+    <div className="nav">
+      <Link to="/" className="nav-logo">
+        Canspan Construction
+      </Link>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Past Projects</Link>
+        </li>
+        <li>
+          <Link to="/aboutpage">About</Link>
+        </li>
+        <li className="nav-contact">
+          <Link to="/contactpage">Contact</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
