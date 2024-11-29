@@ -1,9 +1,11 @@
+import "./ContactPage.css";
+
 import northvan from "../../assets/NorthVan.jpg";
 
 const ContactPage: React.FC = () => {
   return (
     <div>
-      <img src={northvan} className="home-page" alt="home-page" />
+      <img src={northvan} className="home-page-image" />
       <form name="contact" method="POST" data-netlify="true">
         <p>
           <label>
@@ -13,15 +15,6 @@ const ContactPage: React.FC = () => {
         <p>
           <label>
             Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{" "}
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select>
           </label>
         </p>
         <p>
