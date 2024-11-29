@@ -1,13 +1,27 @@
-.background {
-    height: 100%;
-    width: 100%;
-    float: left;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: none;
-    position: fixed;
-    object-fit: cover;
-    z-index: -1;
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 120px;
+    color: white;
+}
+
+.nav-logo{
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    gap: 90px;
+}
+
+.nav-contact{
+    border-radius: 50px;
+    padding: 10px 38px;
+    background: #fff;
+    color: #262626;
 }
