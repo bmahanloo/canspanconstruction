@@ -7,19 +7,33 @@ const ContactPage: React.FC = () => {
     <div>
       <img src={northvan} className="home-page-image" />
       <form name="contact" method="POST" data-netlify="true">
+        <input
+          type="hidden"
+          name="subject"
+          value="Customer Message from Canspan Website"
+        />
         <p>
           <label>
-            Your Name: <input type="text" name="name" />
+            Your Name
+            <br /> <input type="text" name="name" />
           </label>
         </p>
         <p>
           <label>
-            Your Email: <input type="email" name="email" />
+            Your Email
+            <br /> <input type="email" name="email" />
           </label>
         </p>
         <p>
           <label>
-            Message: <textarea name="message"></textarea>
+            Phone
+            <br /> <input type="number" name="number" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message
+            <br /> <textarea name="message"></textarea>
           </label>
         </p>
         <p>
