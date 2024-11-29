@@ -1,4 +1,4 @@
-import './Background.css';
+import './HomePage.css';
 import mordhau from '../../assets/mordhau.jpg';
 import halfsword from '../../assets/halfsword.jpg';
 import northvan from '../../assets/NorthVan.jpg';
@@ -6,12 +6,12 @@ import northvan from '../../assets/NorthVan.jpg';
 
 const images = [northvan, mordhau, halfsword];
 
-const Background: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <div className="background-container">
-      <img src={images[0]} className="background" alt="Background" />
+    <div className="home-page-container">
+      <img src={images[0]} className="home-page" alt="home-page" />
     </div>
   );
 }
 
-export default Background;
+export default HomePage;

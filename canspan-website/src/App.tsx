@@ -1,11 +1,11 @@
-import Background from "./Components/Background/Background";
+import HomePage from "./Components/HomePage/HomePage";
 import Navbar from "./Components/Navbar/Navbar";
 
 const App: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <Background></Background>
+      <HomePage></HomePage>
     </div>
   )
 }

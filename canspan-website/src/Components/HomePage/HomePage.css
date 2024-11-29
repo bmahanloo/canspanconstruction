@@ -1,11 +1,11 @@
-.background-container {
+.home-page-container {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
   
-  .background {
+  .home-page {
     position: fixed;
     float: left;
     top: 0;
