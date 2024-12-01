@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "yet-another-react-lightbox/styles.css";
 
+import { Inter } from "next/font/google";
+
 import Footer from "@/components/Footer";
-import Head from "next/head";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +20,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://hbmconstruction.co.uk",
-    siteName: "Hydrogen Building & Maintenance",
-    countryName: "United Kingdom",
+    siteName: "Canspan Contruction INC.",
+    countryName: "Canada",
     images: [
       {
         url: "/images/hbm-cover.png",

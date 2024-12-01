@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
 import { useMediaQuery } from "react-responsive";
+import { Carousel } from "react-responsive-carousel";
+
 import CarouselIndicator from "@/components/Common/CarouselIndicator";
 import { SITE_DATA } from "@/data";
 
 const ServicesCarousel = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-
 
   return (
     <Carousel
@@ -19,9 +19,15 @@ const ServicesCarousel = () => {
       centerSlidePercentage={Math.max(25, 100 / SITE_DATA.services.length)}
       showIndicators={isMobile}
       showStatus={false}
-      
       renderIndicator={(onClickHandler, isSelected, index, label) => {
-      return <CarouselIndicator onClickHandler={onClickHandler} isSelected={isSelected} index={index} label={label} />;
+        return (
+          <CarouselIndicator
+            onClickHandler={onClickHandler}
+            isSelected={isSelected}
+            index={index}
+            label={label}
+          />
+        );
       }}
       emulateTouch={true}
       preventMovementUntilSwipeScrollTolerance={true}

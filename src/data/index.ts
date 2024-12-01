@@ -1,6 +1,6 @@
 export const SITE_DATA = {
-  url: "https://hbmconsturction.vercel.app/",
-  navbar_title: "Hydrogen Building & Maintenance Ltd.",
+  url: "www.canspanconstruction.com",
+  navbar_title: "Canspan Construction INC.",
   navbar_logo: "/images/hbm-logo.jpeg",
   nav_links: [
     {
@@ -20,7 +20,8 @@ export const SITE_DATA = {
       url: "/#contact",
     },
   ],
-  hero_subheading: "Making dreams come true with our specialist team at Hydrogen Building & Maintenance LTD.",
+  hero_subheading:
+    "Making dreams come true with our specialist team at Hydrogen Building & Maintenance LTD.",
   services: [
     {
       id: 1,
@@ -45,36 +46,19 @@ export const SITE_DATA = {
     },
   ],
 
-
   contact_info: {
-    name: "Hydrogen Building & Maintenance Ltd.",
-    address_lines: [
-      "321-323 High Road",
-      "Romford, Essex",
-      "England, United Kingdom",
-      "RM6 6AX"
-    ],
-
-    phone: "07915368262",
-    email: "contact@hbmconstruction.co.uk",
+    name: "Canspan Construction INC.",
+    phone: "(604) 805-6465",
+    email: "info@canspanconstruction.com",
   },
   social_links: [
     {
-      username: '@hbmconstruction',
-      url: 'https://www.facebook.com/hbmconstruction',
+      username: "@hbmconstruction",
+      url: "https://www.facebook.com/hbmconstruction",
     },
     {
-      username: '@hbmconstruction',
-      url: 'https://www.instagram.com/hbmconstruction/',
-    },
-    {
-      username: '@hbmconstruction',
-      url: 'https://twitter.com/HydrogenBuild',
-    },
-    {
-      username: '@hbmconstruction',
-      url: 'https://www.linkedin.com/company/hydrogen-building-maintenance-ltd',
+      username: "@hbmconstruction",
+      url: "https://www.instagram.com/hbmconstruction/",
     },
   ],
-
-}
+};

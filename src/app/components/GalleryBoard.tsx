@@ -1,13 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
+import PhotoAlbum from "react-photo-album";
 import { useMediaQuery } from "react-responsive";
-import Image from "next/image";
-import { IGalleryImage } from "@/helpers/gallery";
 
-import PhotoAlbum, { RenderPhotoProps } from "react-photo-album";
 import GalleryImage from "@/components/Common/GalleryImage";
-
-
+import { IGalleryImage } from "@/helpers/gallery";
 
 const GalleryBoard = ({ gallery }: { gallery: IGalleryImage[] }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });

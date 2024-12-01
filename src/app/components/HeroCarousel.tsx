@@ -1,7 +1,8 @@
 "use client";
-import CarouselIndicator from "@/components/Common/CarouselIndicator";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+
+import CarouselIndicator from "@/components/Common/CarouselIndicator";
 
 const HeroCarousel = () => {
   return (
@@ -13,7 +14,6 @@ const HeroCarousel = () => {
       interval={5000}
       stopOnHover={false}
       showStatus={false}
-      
       renderIndicator={(onClickHandler, isSelected, index, label) => {
         return (
           <CarouselIndicator
