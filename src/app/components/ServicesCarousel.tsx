@@ -3,10 +3,9 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import { useMediaQuery } from "react-responsive";
 import CarouselIndicator from "@/components/Common/CarouselIndicator";
-import { IProvidedService } from "@/types";
+import { SITE_DATA } from "@/data";
 
-
-const ServicesCarousel = ({services}:{services:IProvidedService[]}) => {
+const ServicesCarousel = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
 
@@ -17,7 +16,7 @@ const ServicesCarousel = ({services}:{services:IProvidedService[]}) => {
       showArrows={true}
       showThumbs={false}
       centerMode={!isMobile}
-      centerSlidePercentage={Math.max(25, 100 / services.length)}
+      centerSlidePercentage={Math.max(25, 100 / SITE_DATA.services.length)}
       showIndicators={isMobile}
       showStatus={false}
       
@@ -28,24 +27,23 @@ const ServicesCarousel = ({services}:{services:IProvidedService[]}) => {
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={60}
     >
-      {services.map((service) => (
+      {SITE_DATA.services.map((service) => (
         <div
           key={service.id}
           className="relative w-full h-full bg-cover flex flex-col"
           style={{
-            backgroundImage: `url(${service.image.url})`,
+            backgroundImage: `url(${service.image})`,
           }}
-
         >
-          <div className="lg:opacity-0 hover:opacity-100 transition-all h-full  bg-black bg-opacity-70 flex items-center justify-center py-28  border-b-2 border-primary">
+          <div className="lg:opacity-0 hover:opacity-100 transition-all h-full  bg-base bg-opacity-70 flex items-center justify-center py-28  border-b-2 border-primary">
             <div className="text-white text-center max-w-sm md:max-w-md">
               <p className="px-2">{service.description}</p>
             </div>
           </div>
 
-          <h3 className="text-white mt-auto text-2xl sm:text-4xl font-bold bg-black bg-opacity-70 w-full mx-auto px-4 pt-2 pb-8  lg:pb-2 rounded-sm ">
-            {service.serviceName}
-          </h3>
+          <h1 className="text-white mt-auto text-4xl font-bold bg-base bg-opacity-50 w-full mx-auto px-4 pt-2 pb-8  lg:pb-2 rounded-sm ">
+            {service.title}
+          </h1>
         </div>
       ))}
     </Carousel>

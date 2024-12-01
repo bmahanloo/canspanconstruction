@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HeroCarousel from "./components/HeroCarousel";
 import ServicesCarousel from "./components/ServicesCarousel";
-import { fetch_gallery, fetch_services } from "@/helpers/dotCMS";
+import { get_files_from_gallery } from "@/helpers/gallery";
 import GalleryBoard from "./components/GalleryBoard";
 import { SITE_DATA } from "@/data";
 import ContactSection from "./components/ContactSection";
@@ -9,25 +9,16 @@ import TypeWriterEffect from "./components/TypeWriter";
 import Link from "next/link";
 
 const Home = async ()  => {
-  async function getHomeData() {
+  async function getGallery() {
     "use server";
     const num_images = 5;
-    const photos = await fetch_gallery(10)
 
-    const services = await fetch_services()
-
-
-
-    const randomLatestNImages = photos.slice(0, num_images*2).sort(() => Math.random() - 0.5).slice(0, num_images);
-    return {
-      gallery: randomLatestNImages,
-      services: services
-    
-    };
+    const files = await get_files_from_gallery();
+    const randomLatestNImages = files.slice(0, num_images*2).sort(() => Math.random() - 0.5).slice(0, num_images);
+    return randomLatestNImages;
   }
 
-  const {gallery, services} = await getHomeData();
-
+  const gallery = await getGallery();
 
   return (
     <main className="min-h-screen">
@@ -37,23 +28,23 @@ const Home = async ()  => {
           <HeroCarousel />
 
           <div
-            className="absolute inset-0 bg-gray-600"
+            className="absolute inset-0 bg-gray-400"
             style={{ mixBlendMode: "multiply" }}
           ></div>
         </div>
-        <div className=" max-w-sm md:max-w-2xl mx-auto relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-2">
-          <span className="text-5xl md:text-7xl font-bold w-full">
-            Welcome to </span>
+        <div className="max-w-sm md:max-w-2xl mx-auto relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-2">
+          <h6 className="text-5xl md:text-7xl font-bold w-full">
+            Welcome to </h6>
             <h1  className="text-primary text-5xl md:text-7xl font-bold w-full">
             
               Hydrogen Building & Maintenance Ltd.
             
           </h1>
           <div className="flex text-2xl w-full flex-col sm:flex-row  mt-2 ">
-            <span className="mr-2">
+            <h6 className="mr-2">
 
             We help you with
-            </span>
+            </h6>
             <h2 className=" text-primary font-bold">
               <TypeWriterEffect
                 strings={["construction.", "restoration.", "remodeling."]}
@@ -73,11 +64,12 @@ const Home = async ()  => {
           </h2>
 
           <h3 className="text-center text-lg text-gray-200 max-w-sm md:max-w-lg lg:max-w-full">
-            Hydrogen Building & Maintenance Ltd. is dedicated to providing the best quality services to our clients.
+            "Comprehensive Services with Clean Workspaces, Client Collaboration,
+            and Satisfaction Guarantee"
           </h3>
         </div>
 
-        <ServicesCarousel  services={services} />
+        <ServicesCarousel />
       </div>
 
       {/* ----------------------------- Gallery Section ---------------------------- */}
@@ -89,7 +81,7 @@ const Home = async ()  => {
           </h2>
 
           <h3 className="text-center text-lg text-gray-900 max-w-sm md:max-w-lg lg:max-w-full">
-            At HBM Constructions we take pride in our work, and we love to show it.
+            View our latest projects and the quality of our workmanship
           </h3>
         </div>
 
@@ -118,7 +110,8 @@ const Home = async ()  => {
           </h2>
 
           <h3 className="text-center text-lg text-gray-200 max-w-sm md:max-w-lg lg:max-w-full px-2">
-            HBM is here to help you with your construction and maintenance needs. Get in touch with us today.
+            We're here to help you with your building and maintenance needs. Get
+            in touch with us today.
           </h3>
         </div>
 
