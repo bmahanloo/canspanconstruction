@@ -9,16 +9,6 @@ const Footer = async () => {
   return (
     <footer className=" border-t-2 border-secondary-dark text-white py-8 bg-primary ">
       <div className="flex flex-col sm:flex-row px-4 sm:px-12 sm:justify-between items-center">
-        <div className="  flex h-full flex-col text-center gap-2 max-w-sm sm:max-w-md">
-          <Image
-            src="/images/hbm-cover.png"
-            alt="Hydrogen construction"
-            className=" rounded-md hidden md:inline-block min-w-40 "
-            height={300}
-            width={300}
-          />
-        </div>
-
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-16 px-4">
           <div className="flex flex-col gap2">
             <h3 className="text-2xl font-bold">Socials</h3>

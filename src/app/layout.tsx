@@ -11,15 +11,15 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hydrogen Building & Maintenance",
-  applicationName: "Hydrogen Building & Maintenance",
+  title: "Canspan Construction",
+  applicationName: "Canspan Construction",
 
   description:
-    "Hydrogen Building & Maintenance LTD, based in Essex, UK, is your premier construction company. With decades of experience, we specialize in extensions, loft conversions, plumbing, electrical work, and roofing. Got a project? Just ask—we're here to help!",
+    "Canspan Construction INC., based in North Vancouver, Canada, is your premier construction company. With decades of experience, we specialize in extensions, renovations, suites, and laneway homes. Got a project? Just ask—we're here to help!",
   openGraph: {
     type: "website",
-    locale: "en_GB",
-    url: "https://hbmconstruction.co.uk",
+    locale: "en_US",
+    url: "https://canspanconstruction.com",
     siteName: "Canspan Contruction INC.",
     countryName: "Canada",
     images: [
@@ -27,31 +27,15 @@ export const metadata: Metadata = {
         url: "/images/hbm-cover.png",
         width: 800,
         height: 600,
-        alt: "Hydrogen Building & Maintenance",
+        alt: "Canspan Construction",
       },
     ],
     description:
-      "Hydrogen Building & Maintenance LTD, based in Essex, UK, is your premier construction company. With decades of experience, we specialize in extensions, loft conversions, plumbing, electrical work, and roofing. Got a project? Just ask—we're here to help!",
-    emails: ["contact@hbmconstruction.co.uk", "hydrogenbnm@gmail.com"],
+      "Canspan Construction INC., based in North Vancouver, Canada, is your premier construction company. With decades of experience, we specialize in extensions, renovations, suites, and laneway homes. Got a project? Just ask—we're here to help!",
+    emails: ["info@canspanconstruction.com"],
     phoneNumbers: ["07915368262"],
   },
-  keywords: [
-    "construction",
-    "restoration",
-    "remodeling",
-    "extensions",
-    "loft conversions",
-    "plumbing",
-    "electrical work",
-    "roofing",
-    "Essex",
-    "UK",
-    "Hydrogen Building & Maintenance",
-    "Hydrogen Building & Maintenance LTD",
-    "Hydrogen Building & Maintenance Ltd.",
-    "Hydrogen Building & Maintenance Limited",
-    "Hydrogen Building & Maintenance Limited.",
-  ],
+  keywords: ["construction", "restoration", "remodeling"],
 };
 
 export default function RootLayout({

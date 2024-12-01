@@ -1,7 +1,6 @@
 export const SITE_DATA = {
   url: "www.canspanconstruction.com",
   navbar_title: "Canspan Construction INC.",
-  navbar_logo: "/images/hbm-logo.jpeg",
   nav_links: [
     {
       name: "About",
@@ -21,7 +20,7 @@ export const SITE_DATA = {
     },
   ],
   hero_subheading:
-    "Making dreams come true with our specialist team at Hydrogen Building & Maintenance LTD.",
+    "Making dreams come true with our specialist team at Canspan Construction INC.",
   services: [
     {
       id: 1,
@@ -48,7 +47,7 @@ export const SITE_DATA = {
 
   contact_info: {
     name: "Canspan Construction INC.",
-    phone: "(604) 805-6465",
+    phone: "(604) 985-8700",
     email: "info@canspanconstruction.com",
   },
   social_links: [
