@@ -16,7 +16,7 @@ const About = () => {
             Canspan Construction is a construction company located in North
             Vancouver, BC, Canada. We have expierience building on the North
             Shore for over 40 years, dealing in all types of construction from
-            industrial to residential. We specialise in residentail renovations
+            industrial to residential. We specialise in residential renovations
             and laneway homes.
           </p>
         </div>
@@ -38,8 +38,7 @@ const About = () => {
         <div className="text-lg mt-4 flex flex-col gap-2 max-w-3xl">
           <p>
             For inquiries or project discussions, reach out to us via phone,
-            email, or our website. We're eager to assist you with top-notch
-            construction services.
+            email, or our website.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 font-bold">
             <p>
