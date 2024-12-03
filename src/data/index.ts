@@ -52,12 +52,12 @@ export const SITE_DATA = {
   },
   social_links: [
     {
-      username: "@hbmconstruction",
-      url: "https://www.facebook.com/hbmconstruction",
+      username: "@canspanconstruction",
+      url: "https://www.facebook.com/canspanconstruction/",
     },
     {
-      username: "@hbmconstruction",
-      url: "https://www.instagram.com/hbmconstruction/",
+      username: "@canspanconstruction",
+      url: "https://www.instagram.com/canspanconstruction/",
     },
   ],
 };

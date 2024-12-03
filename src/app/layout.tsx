@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Canspan Construction INC., based in North Vancouver, Canada, is your premier construction company. With decades of experience, we specialize in extensions, renovations, suites, and laneway homes. Got a project? Just ask—we're here to help!",
     emails: ["info@canspanconstruction.com"],
-    phoneNumbers: ["07915368262"],
+    phoneNumbers: ["(604) 985-8700"],
   },
   keywords: ["construction", "restoration", "remodeling"],
 };
