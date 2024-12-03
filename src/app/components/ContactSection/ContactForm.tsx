@@ -32,7 +32,6 @@ const ContactForm = () => {
       alert("Please enter a message");
       return;
     }
-    console.log(name, email, message);
     setSubmitted(true);
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -52,7 +51,11 @@ const ContactForm = () => {
           Thank you for your message, we will get back to you soon!
         </h1>
       ) : (
-        <form className="w-full max-w-lg " onSubmit={handleSubmit}>
+        <form
+          className="w-full max-w-lg "
+          onSubmit={handleSubmit}
+          data-netlify="true"
+        >
           <div className="flex flex-col mb-4">
             <label htmlFor="name" className="text-white mb-2">
               Name

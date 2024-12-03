@@ -22,14 +22,6 @@ export const metadata: Metadata = {
     url: "https://canspanconstruction.com",
     siteName: "Canspan Contruction INC.",
     countryName: "Canada",
-    images: [
-      {
-        url: "/images/hbm-cover.png",
-        width: 800,
-        height: 600,
-        alt: "Canspan Construction",
-      },
-    ],
     description:
       "Canspan Construction INC., based in North Vancouver, Canada, is your premier construction company. With decades of experience, we specialize in extensions, renovations, suites, and laneway homes. Got a project? Just ask—we're here to help!",
     emails: ["info@canspanconstruction.com"],
