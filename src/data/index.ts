@@ -3,16 +3,20 @@ export const SITE_DATA = {
   navbar_title: "Canspan Construction INC.",
   nav_links: [
     {
+      name: "Home",
+      url: "/",
+    },
+    {
       name: "About",
       url: "/about",
     },
     {
-      name: "Services",
-      url: "/#services",
-    },
-    {
       name: "Gallery",
       url: "/gallery",
+    },
+    {
+      name: "Services",
+      url: "/#services",
     },
     {
       name: "Contact",

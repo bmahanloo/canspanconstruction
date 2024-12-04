@@ -52,23 +52,6 @@ const Home = async () => {
         </div>
       </div>
 
-      {/* -------------------------- Our Services Section -------------------------- */}
-
-      <div id="services" className="w-full pt-12 mb-28 bg-base">
-        <div className="flex flex-col  my-8 w-full items-center">
-          <h2 className="md:text-8xl text-5xl text-white text-center py-4 font-extrabold px-2">
-            Our <span className="text-primary">Services</span>
-          </h2>
-
-          <h3 className="text-center text-lg text-gray-200 max-w-sm md:max-w-lg lg:max-w-full">
-            "Comprehensive Services with Clean Workspaces, Client Collaboration,
-            and Satisfaction Guarantee"
-          </h3>
-        </div>
-
-        <ServicesCarousel />
-      </div>
-
       {/* ----------------------------- Gallery Section ---------------------------- */}
 
       <div id="gallery" className="w-full pt-12 py-8 bg-white">
@@ -94,6 +77,23 @@ const Home = async () => {
             View More
           </Link>
         </div>
+      </div>
+
+      {/* -------------------------- Our Services Section -------------------------- */}
+
+      <div id="services" className="w-full pt-12 mb-28 bg-base">
+        <div className="flex flex-col  my-8 w-full items-center">
+          <h2 className="md:text-8xl text-5xl text-white text-center py-4 font-extrabold px-2">
+            Our <span className="text-primary">Services</span>
+          </h2>
+
+          <h3 className="text-center text-lg text-gray-200 max-w-sm md:max-w-lg lg:max-w-full">
+            "Comprehensive Services with Clean Workspaces, Client Collaboration,
+            and Satisfaction Guarantee"
+          </h3>
+        </div>
+
+        <ServicesCarousel />
       </div>
 
       {/* ----------------------------- Contact Section ---------------------------- */}
