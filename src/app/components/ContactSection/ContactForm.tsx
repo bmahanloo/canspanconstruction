@@ -18,7 +18,7 @@ const ContactForm = () => {
     return message.length > 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     if (!validateEmail(email)) {
@@ -36,34 +36,13 @@ const ContactForm = () => {
 
     setSubmitted(true);
 
-    // Prepare the form data
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-    formData.append("form-name", "contact-form");
-
-    // Send the form data to Netlify
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        setTimeout(() => {
-          setSubmitted(false);
-          setName("");
-          setEmail("");
-          setMessage("");
-        }, 5000);
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      alert("Something went wrong, please try again.");
+    // Optionally, reset the form after submission
+    setTimeout(() => {
       setSubmitted(false);
-    }
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 5000);
   };
 
   return (
@@ -76,6 +55,9 @@ const ContactForm = () => {
         <form
           className="w-full max-w-lg"
           name="contact-form"
+          method="POST"
+          action="/"
+          data-netlify="true" // This is the key to enable Netlify form handling
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact-form" />
