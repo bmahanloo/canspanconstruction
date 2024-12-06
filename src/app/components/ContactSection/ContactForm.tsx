@@ -20,6 +20,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
     if (!validateEmail(email)) {
       alert("Please enter a valid email address");
       return;
@@ -32,16 +33,37 @@ const ContactForm = () => {
       alert("Please enter a message");
       return;
     }
+
     setSubmitted(true);
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        setSubmitted(false);
-        setName("");
-        setEmail("");
-        setMessage("");
-        resolve(null);
-      }, 5000);
-    });
+
+    // Prepare the form data
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+    formData.append("form-name", "contact-form");
+
+    // Send the form data to Netlify
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setTimeout(() => {
+          setSubmitted(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }, 5000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      alert("Something went wrong, please try again.");
+      setSubmitted(false);
+    }
   };
 
   return (
@@ -51,7 +73,12 @@ const ContactForm = () => {
           Thank you for your message, we will get back to you soon!
         </h1>
       ) : (
-        <form className="w-full max-w-lg " onSubmit={handleSubmit}>
+        <form
+          className="w-full max-w-lg"
+          name="contact-form"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="contact-form" />
           <div className="flex flex-col mb-4">
             <label htmlFor="name" className="text-white mb-2">
               Name
@@ -95,7 +122,7 @@ const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="mt-2 text-white bg-primary hover:bg-secondary transition-all  py-2 px-4 rounded-sm "
+            className="mt-2 text-white bg-primary hover:bg-secondary transition-all py-2 px-4 rounded-sm"
           >
             Submit
           </button>
