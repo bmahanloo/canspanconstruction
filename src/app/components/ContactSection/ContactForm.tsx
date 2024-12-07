@@ -6,6 +6,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const validateEmail = (email: string) => {
     const re = /\S+@\S+\.\S+/;
@@ -20,6 +22,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (loading) return;
     if (!validateEmail(email)) {
       alert("Please enter a valid email address");
       return;
@@ -32,24 +35,40 @@ const ContactForm = () => {
       alert("Please enter a message");
       return;
     }
-    setSubmitted(true);
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        setSubmitted(false);
-        setName("");
-        setEmail("");
-        setMessage("");
-        resolve(null);
-      }, 5000);
-    });
+
+    try {
+      setLoading(true);
+      const resp = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (resp.status !== 200) {
+        setError("An error occurred, please try again late!r");
+      }
+      setSubmitted(true);
+    } catch (error) {
+      setError("An error occurred, please try again later");
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="w-full flex justify-center border-2  border-primary p-12">
-      {submitted ? (
-        <h1 className="text-4xl font-bold text-white">
-          Thank you for your message, we will get back to you soon!
-        </h1>
+      {submitted || error != "" ? (
+        <h3
+          className={`text-4xl font-bold ${
+            error != "" ? "text-red-300" : "text-white"
+          } animate-pulse `}
+        >
+          {error
+            ? error
+            : "Thank you for your message, we will get back to you soon!"}
+        </h3>
       ) : (
         <form className="w-full max-w-lg " onSubmit={handleSubmit}>
           <div className="flex flex-col mb-4">
@@ -94,10 +113,11 @@ const ContactForm = () => {
             ></textarea>
           </div>
           <button
+            disabled={loading}
             type="submit"
-            className="mt-2 text-white bg-primary hover:bg-secondary transition-all  py-2 px-4 rounded-sm "
+            className="mt-2 text-white bg-primary hover:bg-secondary disabled:bg-opacity-50 disabled:cursor-not-allowed transition-all  py-2 px-4 rounded-sm "
           >
-            Submit
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       )}
