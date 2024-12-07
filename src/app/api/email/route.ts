@@ -7,9 +7,6 @@ const fromEmail = process.env.EMAIL_FROM;
 const toEmail = process.env.EMAIL_TO;
 
 export async function POST(req: Request) {
-  console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY);
-  console.log("EMAIL_TO:", process.env.EMAIL_TO);
-  console.log("EMAIL_FROM:", process.env.EMAIL_FROM);
   if (fromEmail === undefined || toEmail === undefined) {
     return Response.json(
       { error: "Email configuration is missing" },
