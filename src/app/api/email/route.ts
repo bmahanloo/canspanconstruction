@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     const data = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: "Contact Form Submission",
+      subject: "Canspan Website Contact Form Submission",
       text: `New message\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
