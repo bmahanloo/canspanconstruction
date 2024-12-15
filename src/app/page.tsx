@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { get_files_from_gallery } from "@/helpers/gallery";
+import { get_latest_files_from_gallery } from "@/helpers/gallery";
 
 import ContactSection from "./components/ContactSection";
 import GalleryBoard from "./components/GalleryBoard";
@@ -13,7 +13,7 @@ const Home = async () => {
     "use server";
     const num_images = 5;
 
-    const files = await get_files_from_gallery();
+    const files = await get_latest_files_from_gallery();
     const randomLatestNImages = files
       .slice(0, num_images * 2)
       .sort(() => Math.random() - 0.5)
