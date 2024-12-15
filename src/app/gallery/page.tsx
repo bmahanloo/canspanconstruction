@@ -27,11 +27,10 @@ const Gallery = async () => {
     <div className="flex flex-col w-full ">
       <GalleryCarousel />
       <div className="flex flex-col mx-auto bg-base text-white p-12 gap-8 sm:w-4/5">
-        <h1 className="text-6xl font-bold text-center">Our Latest Project</h1>
         <div className=" w-full min-h-screen">
           <PhotoGallery photos={latestGallery} />
         </div>
-        <h1 className="text-6xl font-bold text-center">Our Past Projects</h1>
+        <br />
         <div className=" w-full min-h-screen">
           <PhotoGallery photos={oldGallery} />
         </div>
