@@ -49,7 +49,7 @@ const Home = async () => {
             <h6 className="mr-2">We help you with</h6>
             <h2 className=" text-primary font-bold">
               <TypeWriterEffect
-                strings={["construction.", "restoration.", "remodeling."]}
+                strings={["construction", "renovation", "restoration"]}
                 cursor="⚒"
               />
             </h2>
@@ -93,8 +93,7 @@ const Home = async () => {
           </h2>
 
           <h3 className="text-center text-lg text-gray-200 max-w-sm md:max-w-lg lg:max-w-full">
-            "Comprehensive Services with Clean Workspaces, Client Collaboration,
-            and Satisfaction Guarantee"
+            Some of the services we provide
           </h3>
         </div>
 

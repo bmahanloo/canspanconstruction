@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     emails: ["info@canspanconstruction.com"],
     phoneNumbers: ["(604) 985-8700"],
   },
-  keywords: ["construction", "restoration", "remodeling"],
+  keywords: ["construction", "renovation", "restoration"],
 };
 
 export default function RootLayout({

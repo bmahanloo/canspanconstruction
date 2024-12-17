@@ -35,14 +35,14 @@ export const SITE_DATA = {
     },
     {
       id: 2,
-      title: "Restoration & Renovation",
+      title: "Restoration",
       description:
         "We have in depth experience in the repair and restoration of older buildings and fittings. Why not freshen up with a new look.",
       image: "/images/restoration-service.jpg",
     },
     {
       id: 3,
-      title: "Remodeling",
+      title: "Renovation",
       description:
         "With our Specialist team we provide the best work in the industry. Get your neighbour’s talking with our outside projects. As we all know it’s the first thing your guests see when visiting.",
       image: "/images/remodeling-service.jpg",
