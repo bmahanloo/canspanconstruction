@@ -7,7 +7,7 @@ import { SITE_DATA } from "@/data";
 
 const Footer = async () => {
   return (
-    <footer className=" border-t-2 border-secondary-dark text-white py-8 bg-primary ">
+    <footer className=" border-t-2 border-secondary text-white py-8 bg-primary ">
       <div className="flex flex-col sm:flex-row px-4 sm:px-12 sm:justify-between items-center">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-16 px-4">
           <div className="flex flex-col gap2">
