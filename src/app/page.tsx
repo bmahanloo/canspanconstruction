@@ -4,7 +4,6 @@ import { get_latest_files_from_gallery } from "@/helpers/gallery";
 
 import ContactSection from "./components/ContactSection";
 import GalleryBoard from "./components/GalleryBoard";
-import HeroCarousel from "./components/HeroCarousel";
 import ServicesCarousel from "./components/ServicesCarousel";
 import TypeWriterEffect from "./components/TypeWriter";
 
@@ -28,7 +27,13 @@ const Home = async () => {
       {/*  -------------------------- Hero Carousel Section -------------------------  */}
       <div className="relative  ">
         <div className="absolute inset-0 ">
-          <HeroCarousel />
+          <div className="relative h-screen">
+            <img
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src="/images/cover1.jpg"
+              alt="Cover Image"
+            />
+          </div>
 
           <div
             className="absolute inset-0 bg-gray-400"

@@ -5,7 +5,6 @@ import {
   get_old_files_from_gallery,
 } from "@/helpers/gallery";
 
-import GalleryCarousel from "./components/GalleryCarousel";
 import PhotoGallery from "./components/PhotoGallery";
 
 const Gallery = async () => {
@@ -25,7 +24,13 @@ const Gallery = async () => {
   const oldGallery = await getOldGallery();
   return (
     <div className="flex flex-col w-full ">
-      <GalleryCarousel />
+      <div className="relative">
+        <img
+          className="w-full h-2/3 max-h-96 object-cover"
+          src="/images/cover1.jpg"
+          alt="Gallery Image"
+        />
+      </div>
       <div className="flex flex-col mx-auto bg-base text-white p-12 gap-8 sm:w-4/5">
         <div className=" w-full min-h-screen">
           <PhotoGallery photos={latestGallery} />

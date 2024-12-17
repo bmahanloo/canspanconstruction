@@ -3,12 +3,16 @@ import React from "react";
 
 import { SITE_DATA } from "@/data";
 
-import AboutCarousel from "./components/AboutCarousel";
-
 const About = () => {
   return (
     <div className="flex flex-col w-full ">
-      <AboutCarousel />
+      <div className="relative">
+        <img
+          className="w-full h-2/3 max-h-96 object-cover"
+          src="/images/cover1.jpg"
+          alt="About Image"
+        />
+      </div>
       <div className="flex flex-col items-center justify-center w-full bg-base text-white p-12">
         <h1 className="text-4xl font-bold">About Us</h1>
         <div className="text-lg mt-4 flex flex-col gap-2 max-w-3xl text-pretty">

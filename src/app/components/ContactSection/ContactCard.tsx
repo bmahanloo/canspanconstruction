@@ -10,6 +10,9 @@ const ContactCard = () => {
         <p className="">
           {SITE_DATA.contact_info.name} <br />
         </p>
+        <p className="">
+          {SITE_DATA.contact_info.location} <br />
+        </p>
         <hr className="my-2 border-secondary" />
         <p>
           <span className="font-semibold">

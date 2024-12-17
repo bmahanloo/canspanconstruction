@@ -51,6 +51,7 @@ export const SITE_DATA = {
 
   contact_info: {
     name: "Canspan Construction INC.",
+    location: "North Vancouver, BC",
     phone: "(604) 985-8700",
     email: "info@canspanconstruction.com",
   },
